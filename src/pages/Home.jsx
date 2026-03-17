@@ -22,7 +22,10 @@ function Home() {
   return (
     <div className="home-page">
       <Helmet>
-        <title>Home | Bundela Woods Cottage & Restaurant Near Temples</title>
+        <title>
+          Bundela Woods Cottage & Restaurant | Premium Boutique Stay in
+          Khajuraho
+        </title>
 
         <meta
           name="description"
