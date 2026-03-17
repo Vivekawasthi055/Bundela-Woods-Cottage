@@ -22,9 +22,7 @@ function Home() {
   return (
     <div className="home-page">
       <Helmet>
-        <title>
-          Best Hotel in Khajuraho | Bundela Woods Cottage Near Temples
-        </title>
+        <title>Home | Bundela Woods Cottage & Restaurant Near Temples</title>
 
         <meta
           name="description"
