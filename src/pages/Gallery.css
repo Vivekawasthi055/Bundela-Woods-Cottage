@@ -1,0 +1,528 @@
+/* Gallery Hero */
+.gallery-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 53, 28, 0.8) 0%,
+    rgba(45, 74, 43, 0.6) 100%
+  );
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+}
+
+.gallery-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery Content */
+.gallery-content {
+  background: var(--bg-light);
+  padding: 80px 0;
+}
+
+/* Gallery Filter */
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.filter-btn {
+  padding: 12px 30px;
+  background: white;
+  color: var(--text-dark);
+  border: 2px solid var(--primary-green);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: #000;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+  z-index: 0;
+}
+.filter-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+.filter-btn span {
+  position: relative;
+  z-index: 1;
+}
+.filter-btn:hover {
+  color: #ddab07;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(45, 74, 43, 0.25);
+}
+.filter-btn.active {
+  background: var(--primary-green);
+  color: white;
+  box-shadow: 0 4px 15px rgba(45, 74, 43, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Gallery Item Animations */
+@keyframes galleryFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes gallerySlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes gallerySlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes galleryZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-item {
+  position: relative;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: galleryFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.gallery-item:nth-child(3n + 1) {
+  animation: gallerySlideLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.gallery-item:nth-child(3n + 2) {
+  animation: galleryZoomIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.gallery-item:nth-child(3n) {
+  animation: gallerySlideRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.gallery-item:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-item:hover img {
+  transform: scale(1.15) rotate(2deg);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(45, 74, 43, 0.7) 60%,
+    rgba(45, 74, 43, 0.95) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.gallery-item:hover .gallery-icon {
+  transform: scale(1);
+}
+
+.gallery-title {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+.gallery-item:hover .gallery-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Video Items */
+.video-item {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-item:hover .video-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.play-icon {
+  font-size: 4rem;
+  color: white;
+  opacity: 0.9;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+.gallery-item:hover .play-icon {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+/* Video Lightbox */
+.video-lightbox .video-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 1200px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+  animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+}
+.lightbox-caption {
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  backdrop-filter: blur(10px);
+}
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg) scale(1.1);
+}
+
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  backdrop-filter: blur(10px);
+}
+.lightbox-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.15);
+}
+.lightbox-btn.prev {
+  left: 20px;
+}
+.lightbox-btn.next {
+  right: 20px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.505);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  z-index: 10001;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 768px) {
+  .gallery-hero {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .gallery-filter {
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+  .filter-btn {
+    padding: 9px 18px;
+    font-size: 0.82rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .gallery-item {
+    height: 200px;
+  }
+  /* Disable hover effects on touch — no translateY issues */
+  .gallery-item:hover {
+    transform: none;
+  }
+  .gallery-item:hover img {
+    transform: none;
+  }
+
+  .lightbox-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
+  .lightbox-btn.prev {
+    left: 8px;
+  }
+  .lightbox-btn.next {
+    right: 8px;
+  }
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+  .lightbox-counter {
+    bottom: 10px;
+    font-size: 0.7rem;
+    padding: 8px 18px;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-hero {
+    height: 40vh;
+    min-height: 260px;
+  }
+
+  .gallery-filter {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    /* Hide scrollbar but keep scroll */
+    scrollbar-width: none;
+  }
+  .gallery-filter::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .gallery-item {
+    height: 220px;
+  }
+}

@@ -1,0 +1,849 @@
+/* =============================================
+   REVIEWS PAGE — Full Responsive
+   ============================================= */
+
+/* ── HERO ── */
+.reviews-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.reviews-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 53, 28, 0.8) 0%,
+    rgba(45, 74, 43, 0.6) 100%
+  );
+}
+.reviews-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 1.5rem;
+}
+.reviews-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.reviews-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* =============================================
+   PLATFORM OVERVIEW
+   ============================================= */
+.platform-overview {
+  background: white;
+  padding: 70px 0 60px;
+}
+.platform-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.platform-intro h2 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+}
+.platform-intro p {
+  color: var(--text-medium);
+  font-size: 1.05rem;
+}
+
+.platform-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.platform-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 24px 28px;
+  background: var(--bg-light);
+  border-radius: 16px;
+  border: 1.5px solid #e8f0e8;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.platform-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--plat-color, #4285f4);
+}
+.platform-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.11);
+  border-color: var(--plat-color, #4285f4);
+  background: white;
+}
+.plat-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--accent-gold, #c9a961);
+  color: #1a2e1a;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+.plat-logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+  flex-shrink: 0;
+}
+.plat-logo-img {
+  width: 34px;
+  height: 34px;
+}
+.plat-logo-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.booking-logo {
+  color: #003580;
+}
+.plat-logo-emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.plat-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.plat-rating {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.plat-stars {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.plat-count {
+  font-size: 0.82rem;
+  color: var(--text-medium);
+  margin-bottom: 16px;
+}
+.plat-cta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--plat-color, #4285f4);
+  padding: 6px 16px;
+  border: 1.5px solid var(--plat-color, #4285f4);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.platform-card:hover .plat-cta {
+  background: var(--plat-color, #4285f4);
+  color: white;
+}
+
+/* =============================================
+   WRITE A REVIEW — Attractive Buttons
+   ============================================= */
+.review-actions {
+  background: var(--bg-light);
+  padding: 80px 0;
+}
+.action-content {
+  text-align: center;
+}
+.action-content h2 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+}
+.action-content > p {
+  color: var(--text-medium);
+  font-size: 1.05rem;
+  margin-bottom: 44px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Shared Write-Review Button ── */
+.write-review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 32px;
+  border-radius: 14px;
+  text-decoration: none;
+  min-width: 260px;
+  transition: all 0.28s cubic-bezier(0.34, 1.4, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+.write-review-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.write-review-btn:hover {
+  transform: translateY(-3px);
+}
+.write-review-btn:hover::after {
+  opacity: 1;
+}
+.write-review-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Icon circle */
+.wrb-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+/* Google logo is colourful — needs solid white bg to be visible on blue */
+.google-review-btn .wrb-icon {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.wrb-icon img {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+.wrb-owl {
+  font-size: 1.7rem;
+}
+
+/* Text block */
+.wrb-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex: 1;
+}
+.wrb-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.wrb-main {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  font-family: var(--font-heading, "Playfair Display", serif);
+}
+
+/* Stars */
+.wrb-stars {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* Google button */
+.google-review-btn {
+  background: linear-gradient(135deg, #1a73e8 0%, #0d5bc4 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 6px 24px rgba(26, 115, 232, 0.35);
+}
+.google-review-btn:hover {
+  box-shadow: 0 12px 36px rgba(26, 115, 232, 0.45);
+}
+
+/* TripAdvisor button */
+.tripadvisor-review-btn {
+  background: linear-gradient(135deg, #00aa6c 0%, #007a4e 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 6px 24px rgba(0, 170, 108, 0.35);
+}
+.tripadvisor-review-btn:hover {
+  box-shadow: 0 12px 36px rgba(0, 170, 108, 0.45);
+}
+
+/* =============================================
+   GUEST REVIEWS GRID
+   ============================================= */
+.guest-reviews {
+  background: white;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--bg-light);
+  padding: 28px;
+  border-radius: 14px;
+  border-left: 4px solid var(--accent-gold);
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.09);
+  border-left-color: var(--primary-green);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  gap: 12px;
+}
+.reviewer-info {
+  display: flex;
+  gap: 13px;
+  min-width: 0;
+  flex: 1;
+}
+.reviewer-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.reviewer-details {
+  min-width: 0;
+}
+.reviewer-details h4 {
+  color: var(--text-dark);
+  margin-bottom: 2px;
+  font-size: 1rem;
+}
+.reviewer-location {
+  color: var(--text-medium);
+  font-size: 0.82rem;
+  margin-bottom: 7px;
+}
+
+/* Platform pill */
+.review-platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px 3px 6px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.review-platform-pill:hover {
+  background: color-mix(in srgb, var(--pill-color) 10%, white);
+  border-color: var(--pill-color);
+  color: var(--pill-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+.pill-icon {
+  display: flex;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  font-size: 0.68rem;
+}
+.pill-icon img {
+  width: 12px;
+  height: 12px;
+}
+.pill-arrow {
+  font-size: 0.62rem;
+  opacity: 0.55;
+  transition: transform 0.2s;
+}
+.review-platform-pill:hover .pill-arrow {
+  transform: translate(1px, -1px);
+  opacity: 1;
+}
+
+.rc-pill-booking {
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #003580;
+  line-height: 1;
+}
+.rc-pill-emoji {
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.review-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+.review-stars {
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+.review-date {
+  color: var(--text-light);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.review-content p {
+  color: var(--text-medium);
+  line-height: 1.85;
+  font-size: 0.97rem;
+  font-style: italic;
+}
+
+/* =============================================
+   TRUST SECTION
+   ============================================= */
+.trust-section {
+  background: linear-gradient(135deg, #f8f6f1 0%, #ffffff 100%);
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+.trust-card {
+  text-align: center;
+  padding: 40px 28px;
+}
+.trust-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: var(--primary-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+}
+.trust-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+}
+.trust-card p {
+  color: var(--text-medium);
+  line-height: 1.8;
+}
+
+/* =============================================
+   REVIEWS CTA
+   ============================================= */
+.reviews-cta {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #1f3320 100%);
+  text-align: center;
+  color: white;
+}
+.reviews-cta .cta-content h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+.reviews-cta .cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.btn-large {
+  padding: 20px 60px;
+  font-size: 1.1rem;
+}
+
+/* =============================================
+   RESPONSIVE — ≤ 1024px
+   ============================================= */
+@media (max-width: 1024px) {
+  .platform-cards {
+    gap: 18px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trust-grid {
+    gap: 32px;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — ≤ 968px
+   ============================================= */
+@media (max-width: 968px) {
+  .platform-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .trust-card {
+    padding: 32px 24px;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — ≤ 768px
+   ============================================= */
+@media (max-width: 768px) {
+  .reviews-hero {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+
+  /* Platform cards — 3 columns, compact */
+  .platform-overview {
+    padding: 48px 0 36px;
+  }
+  .platform-intro {
+    margin-bottom: 32px;
+  }
+  .platform-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .platform-card {
+    padding: 20px 10px 16px;
+  }
+  .plat-logo {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+  }
+  .plat-logo-img {
+    width: 24px;
+    height: 24px;
+  }
+  .plat-logo-emoji {
+    font-size: 1.4rem;
+  }
+  .plat-logo-text {
+    font-size: 0.85rem;
+  }
+  .plat-rating {
+    font-size: 1.8rem;
+  }
+  .plat-name {
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+  }
+  .plat-stars {
+    font-size: 0.78rem;
+  }
+  .plat-count {
+    font-size: 0.66rem;
+    margin-bottom: 10px;
+  }
+  .plat-cta {
+    font-size: 0.58rem;
+    padding: 4px 10px;
+    letter-spacing: 0.8px;
+  }
+  .plat-badge {
+    font-size: 0.46rem;
+    padding: 2px 6px;
+    top: 8px;
+    right: 8px;
+  }
+
+  /* Write review buttons — stack */
+  .review-actions {
+    padding: 56px 0;
+  }
+  .review-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .write-review-btn {
+    width: 100%;
+    max-width: 360px;
+    min-width: auto;
+    padding: 16px 24px;
+    justify-content: flex-start;
+  }
+  .wrb-main {
+    font-size: 1.05rem;
+  }
+
+  /* Review cards */
+  .reviews-grid {
+    gap: 16px;
+  }
+  .review-card {
+    padding: 20px 16px;
+  }
+  .review-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .review-meta {
+    text-align: left;
+  }
+
+  .trust-card {
+    padding: 26px 18px;
+  }
+  .trust-icon {
+    width: 68px;
+    height: 68px;
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .btn-large {
+    padding: 16px 40px;
+    font-size: 1rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — ≤ 480px
+   ============================================= */
+@media (max-width: 480px) {
+  .reviews-hero {
+    height: 40vh;
+    min-height: 260px;
+  }
+  .reviews-hero p {
+    letter-spacing: 1px;
+  }
+
+  /* Platform cards — full-width horizontal rows, one per line */
+  .platform-cards {
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .platform-card {
+    flex-direction: column; /* Vertical layout */
+    text-align: center;
+    padding: 20px 16px;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .platform-card::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px; /* Top accent line like desktop */
+    width: 100%;
+    border-radius: 0;
+  }
+  /* Logo stays left */
+  .plat-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .plat-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .plat-logo-emoji {
+    font-size: 1.6rem;
+  }
+  .plat-logo-text {
+    font-size: 0.9rem;
+  }
+
+  /* Centre info block stretches */
+  .plat-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .plat-rating {
+    font-size: 1.7rem;
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+  .plat-stars {
+    font-size: 0.78rem;
+    margin-bottom: 2px;
+  }
+  .plat-count {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+  .plat-cta {
+    display: none;
+  }
+  .plat-badge {
+    top: 10px;
+    right: 10px;
+    font-size: 0.5rem;
+  }
+
+  /* Write review full width */
+  .write-review-btn {
+    max-width: 100%;
+    padding: 14px 18px;
+    gap: 12px;
+  }
+  .wrb-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .wrb-icon img {
+    width: 22px;
+    height: 22px;
+  }
+  .wrb-owl {
+    font-size: 1.4rem;
+  }
+  .wrb-main {
+    font-size: 1rem;
+  }
+  .wrb-stars {
+    display: none;
+  }
+
+  .reviews-grid {
+    gap: 12px;
+  }
+  .review-card {
+    padding: 18px 14px;
+  }
+  .reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  .reviewer-details h4 {
+    font-size: 0.92rem;
+  }
+  .review-content p {
+    font-size: 0.92rem;
+  }
+
+  .trust-grid {
+    gap: 20px;
+  }
+  .trust-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+  .trust-card h3 {
+    font-size: 1.15rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — ≤ 360px (very small phones)
+   ============================================= */
+@media (max-width: 360px) {
+  .platform-cards {
+    max-width: 100%;
+  }
+  .plat-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .plat-rating {
+    font-size: 1.4rem;
+  }
+  .write-review-btn {
+    padding: 11px 13px;
+    gap: 9px;
+  }
+  .wrb-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .wrb-main {
+    font-size: 0.9rem;
+  }
+  .wrb-sub {
+    display: none;
+  }
+  .review-card {
+    padding: 14px 11px;
+  }
+}
