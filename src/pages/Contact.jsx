@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ function Contact() {
   });
 
   const [formStatus, setFormStatus] = useState("");
+  const [statusType, setStatusType] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -21,13 +23,35 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real application, this would send the data to a backend
-    setFormStatus("Thank you for contacting us! We will get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
 
-    setTimeout(() => {
-      setFormStatus("");
-    }, 5000);
+    emailjs
+      .send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setFormStatus("Message sent successfully!");
+          setStatusType("success");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+
+          setTimeout(() => {
+            setFormStatus("");
+            setStatusType("");
+          }, 5000);
+        },
+        () => {
+          setFormStatus("Failed to send message. Try again.");
+          setStatusType("error");
+
+          setTimeout(() => {
+            setFormStatus("");
+            setStatusType("");
+          }, 5000);
+        },
+      );
   };
 
   return (
@@ -266,7 +290,11 @@ function Contact() {
                   Send Message
                 </button>
 
-                {formStatus && <div className="form-status">{formStatus}</div>}
+                {formStatus && (
+                  <div className={`form-status ${statusType}`}>
+                    {formStatus}
+                  </div>
+                )}
               </form>
             </div>
           </div>

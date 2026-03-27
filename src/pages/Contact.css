@@ -198,6 +198,14 @@
   animation: slideInUp 0.5s ease;
 }
 
+.form-status.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+
 @keyframes slideInUp {
   from {
     opacity: 0;
