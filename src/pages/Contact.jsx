@@ -11,6 +11,7 @@ function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
   const [formStatus, setFormStatus] = useState("");
   const [statusType, setStatusType] = useState("");
 
@@ -23,6 +24,8 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setLoading(true);
 
     emailjs
       .send(
@@ -51,7 +54,10 @@ function Contact() {
             setStatusType("");
           }, 5000);
         },
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -286,8 +292,12 @@ function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-submit">
-                  Send Message
+                <button
+                  type="submit"
+                  className="btn btn-primary btn-submit"
+                  disabled={loading}
+                >
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
 
                 {formStatus && (
