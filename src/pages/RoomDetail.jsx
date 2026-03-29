@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useParams, Link } from "react-router-dom";
 import "./RoomDetail.css";
@@ -6,19 +6,26 @@ import "./RoomDetail.css";
 function RoomDetail() {
   const { roomType } = useParams();
   const [currentImage, setCurrentImage] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const roomsData = {
     deluxe: {
       name: "Deluxe Room",
       subtitle: "Luxury with Scenic Views",
       images: [
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1200&q=80",
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=80",
-        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80",
-        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&q=80",
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=80",
-        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&q=80",
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=80",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780374/IMG_3748_bkduey.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780393/IMG_5321_kfdefw.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780373/IMG_3745_vvngca.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780377/IMG_3964_igjipg.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780378/IMG_3965_fvclo4.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780374/IMG_3957_x6mxlp.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780386/IMG_4498_sxvhk4.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780392/IMG_4506_o3slea.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780387/IMG_4501_bdzb2g.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780378/IMG_3958_erdiog.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780383/IMG_3988_q4yh5r.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780389/IMG_4504_v50jus.jpg",
       ],
       description:
         "Our Deluxe Rooms are the epitome of comfort and luxury at Bundela Woods. Featuring premium wooden interiors throughout, each room offers a private balcony with stunning views of our lush gardens and surrounding nature. Perfect for couples seeking a romantic getaway or families wanting spacious accommodation.",
@@ -49,10 +56,17 @@ function RoomDetail() {
       name: "Standard Room",
       subtitle: "Unique Tree View Experience",
       images: [
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200&q=80",
-        "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=1200&q=80",
-        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&q=80",
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784772/IMG_3982_lwtkpx.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784783/IMG_4503_pgprp7.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784776/IMG_3983_zbdbz0.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784774/IMG_4504_ulmoda.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784767/IMG_3976_e9m4dd.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784761/IMG_3750_ndgstl.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784780/IMG_4498_of6l8p.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784767/IMG_3972_u5pnoq.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784760/IMG_3749_wqlgvt.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784766/IMG_3957_f2dngd.jpg",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784773/IMG_4497_jqxmpg.jpg",
       ],
       description:
         "Our unique Standard Room offers an extraordinary experience with a living tree view inside the room itself. This one-of-a-kind accommodation seamlessly blends nature with modern comfort, creating an intimate connection with the environment while maintaining all the luxuries of contemporary hospitality.",
@@ -106,6 +120,22 @@ function RoomDetail() {
     );
   };
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        nextImage();
+      } else if (e.key === "ArrowLeft") {
+        prevImage();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const selectImage = (index) => {
     setCurrentImage(index);
   };
@@ -146,7 +176,15 @@ function RoomDetail() {
       <section className="section image-slider-section">
         <div className="container">
           <div className="slider-container reveal">
-            <div className="main-image">
+            <div
+              className="main-image"
+              onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
+              onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
+              onTouchEnd={() => {
+                if (touchStart - touchEnd > 50) nextImage(); // swipe left
+                if (touchEnd - touchStart > 50) prevImage(); // swipe right
+              }}
+            >
               <img
                 src={room.images[currentImage]}
                 alt={`${room.name} - image ${currentImage + 1}`}

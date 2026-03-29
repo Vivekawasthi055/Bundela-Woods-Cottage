@@ -7,7 +7,11 @@ import BookingWidget from "../components/BookingWidget";
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const heroImages = ["/img1.jpg", "/img2.jpg", "/img3.jpg"];
+  const heroImages = [
+    "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774778347/img1_bg1bkb.jpg",
+    "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774778348/img2_yjxjhv.jpg",
+    "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774778344/img3_ndq0nv.jpg",
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -153,7 +157,7 @@ function Home() {
             <div className="room-card reveal">
               <div className="room-image">
                 <img
-                  src="/delux.jpg"
+                  src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780374/IMG_3748_bkduey.jpg"
                   alt="Deluxe room in best hotel in Khajuraho with wooden interior"
                   loading="lazy"
                   decoding="async"
@@ -183,7 +187,7 @@ function Home() {
             <div className="room-card reveal">
               <div className="room-image">
                 <img
-                  src="/standard.jpg"
+                  src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784772/IMG_3982_lwtkpx.jpg"
                   alt="Standard wooden cottage room in Khajuraho near temples"
                   loading="lazy"
                   decoding="async"
@@ -426,10 +430,8 @@ function Home() {
             {[
               "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
               "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80",
-              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80",
-              "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80",
-              "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80",
-              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80",
+              "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784767/IMG_3976_e9m4dd.jpg",
+              "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784780/IMG_4498_of6l8p.jpg",
             ].map((img, index) => (
               <div key={index} className="preview-image reveal">
                 <img

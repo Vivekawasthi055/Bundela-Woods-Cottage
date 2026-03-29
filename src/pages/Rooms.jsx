@@ -12,7 +12,7 @@ function Rooms() {
       name: "Deluxe Room",
       subtitle: "Luxury with a View",
       image:
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780374/IMG_3748_bkduey.jpg",
       description:
         "Spacious wooden room with private balcony offering scenic views of our lush gardens. Perfect for couples and families seeking comfort and tranquility.",
       features: [
@@ -35,7 +35,7 @@ function Rooms() {
       name: "Standard Room",
       subtitle: "Nature Inside",
       image:
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
+        "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784772/IMG_3982_lwtkpx.jpg",
       description:
         "Our unique room featuring a living tree view inside the space, offering an immersive natural experience while maintaining modern comfort and luxury.",
       features: [

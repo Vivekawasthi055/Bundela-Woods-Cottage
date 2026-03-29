@@ -51,7 +51,7 @@
 
 .main-image {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 600px;
   border-radius: 12px;
   overflow: hidden;
@@ -61,14 +61,15 @@
 .main-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  /* USE - object-fit: cover; WHEN USE ALL HORIZONTAL IMAGES */
 }
 
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(228, 228, 228, 0.9);
   color: var(--primary-green);
   border: none;
   width: 50px;
