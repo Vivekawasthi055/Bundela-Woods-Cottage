@@ -39,7 +39,6 @@ function RoomDetail() {
         "Complimentary high-speed Wi-Fi",
         "LED TV with satellite channels",
         "Tea and coffee making facilities",
-        "Mini refrigerator",
         "Work desk and comfortable seating",
         "Wardrobe with ample storage",
         "Room service available 24/7",

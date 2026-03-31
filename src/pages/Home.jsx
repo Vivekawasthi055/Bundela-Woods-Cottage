@@ -133,7 +133,7 @@ function Home() {
             </div>
             <div className="about-image reveal">
               <img
-                src="/img4.jpg"
+                src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774947004/IMG_3718_nx6ji4.jpg"
                 alt="Luxury wooden cottage interior in Khajuraho hotel"
                 loading="lazy"
                 decoding="async"

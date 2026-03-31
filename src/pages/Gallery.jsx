@@ -17,9 +17,9 @@ function Gallery() {
     "All",
     "Rooms",
     "Lobby",
-    "Indoor",
+    "Restaurant",
     "Outdoor",
-    "Garden",
+    // "Garden",
     "Parking",
   ];
 
