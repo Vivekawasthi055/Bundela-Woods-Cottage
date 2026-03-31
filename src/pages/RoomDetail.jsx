@@ -143,7 +143,7 @@ function RoomDetail() {
     <div className="room-detail-page">
       <Helmet>
         <title>
-          {room.name} in Khajuraho | Book Luxury Hotel Room - Bundela Woods
+          {room.name} | Book Luxury Hotel Room - Bundela Woods in Khajuraho
         </title>
 
         <meta

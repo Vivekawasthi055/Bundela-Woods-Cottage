@@ -428,8 +428,8 @@ function Home() {
           </div>
           <div className="preview-grid">
             {[
-              "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
-              "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80",
+              "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774947356/IMG-20260117-WA0017_rijpcq.jpg",
+              "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774947361/IMG_5193_nmejja.jpg",
               "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784767/IMG_3976_e9m4dd.jpg",
               "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784780/IMG_4498_of6l8p.jpg",
             ].map((img, index) => (

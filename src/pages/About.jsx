@@ -71,7 +71,7 @@ function About() {
             </div>
             <div className="story-image reveal">
               <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+                src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774947346/IMG_3953_bvpga6.jpg"
                 alt="Exterior view of Bundela Woods Cottage"
                 loading="lazy"
                 decoding="async"
@@ -87,7 +87,7 @@ function About() {
           <div className="vision-grid">
             <div className="vision-image reveal">
               <img
-                src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
+                src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774784767/IMG_3976_e9m4dd.jpg"
                 alt="Premium wooden cottage interior"
                 loading="lazy"
                 decoding="async"
@@ -185,7 +185,7 @@ function About() {
             <div className="service-card reveal">
               <div className="service-image">
                 <img
-                  src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80"
+                  src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780393/IMG_5321_kfdefw.jpg"
                   alt="Accommodation"
                   loading="lazy"
                   decoding="async"
@@ -204,7 +204,7 @@ function About() {
             <div className="service-card reveal">
               <div className="service-image">
                 <img
-                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80"
+                  src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774951452/IMG_4997_ggv8eg.jpg"
                   alt="Restaurant"
                   loading="lazy"
                   decoding="async"
@@ -222,7 +222,7 @@ function About() {
             <div className="service-card reveal">
               <div className="service-image">
                 <img
-                  src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&q=80"
+                  src="https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774780374/IMG_3748_bkduey.jpg"
                   alt="Room Service"
                   loading="lazy"
                   decoding="async"

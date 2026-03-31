@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=80");
+  background-image: url("https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774946998/IMG_3558_vy3nus.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -68,7 +68,15 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+.platform-cards:has(.platform-card:only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 
+.platform-cards:has(.platform-card:only-child) .platform-card {
+  width: 100%;
+  max-width: 300px;
+}
 .platform-card {
   position: relative;
   display: flex;

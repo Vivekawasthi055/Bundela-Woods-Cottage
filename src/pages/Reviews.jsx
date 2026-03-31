@@ -6,82 +6,82 @@ function Reviews() {
   const guestReviews = [
     {
       id: 1,
-      name: "Rahul Sharma",
+      name: "Ritik Vishwakarma",
       rating: 5,
-      date: "January 2026",
+      date: "March 2026",
       review:
-        "An absolutely wonderful experience! The wooden cottage is beautifully crafted with attention to every detail. The room was spacious, clean, and the balcony view was breathtaking. Perfect place for a peaceful getaway near Khajuraho temples.",
-      location: "Mumbai, India",
+        "Such a nice place for stay and food is also very delicious must try 💯.",
+      location: "India",
       platform: "Google",
       platformLink:
-        "https://www.google.com/maps/place/Bundela+Woods+Cottage+And+Restaurant",
+        "https://www.google.com/travel/search?q=bundela%20woods%20cottage%20and%20restaurant&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72887412%2C72958624%2C73059275%2C73064764%2C73249150%2C121522131&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaRgooEiYyJDB4Mzk4MmU1MDAxYjQyOTMzOToweDg0MWZkMTdiOWEyYzY5MBIaEhQKBwjqDxADGAESBwjqDxADGAIYATICEAA&qs=CAEyE0Nnb0lrSTJMemZ1aV82QUlFQUU4AkIJCZDGorkX_UEIQgkJkMaiuRf9QQg&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiQxdr-kMqTAxUAAAAAHQAAAAAQCA",
     },
-    {
-      id: 2,
-      name: "Emily Watson",
-      rating: 5,
-      date: "December 2025",
-      review:
-        "One of the most unique stays we have experienced in India. The 100% wooden construction gives such a warm, natural feeling. Staff was incredibly helpful and the location is perfect for exploring Khajuraho. Highly recommended!",
-      location: "London, UK",
-      platform: "Booking.com",
-      platformLink:
-        "https://www.booking.com/hotel/in/bundela-woods-cottage-and-restaurant.en-gb.html",
-    },
-    {
-      id: 3,
-      name: "Priya Patel",
-      rating: 5,
-      date: "November 2025",
-      review:
-        "The standard room with the tree view inside was such a unique experience! Never seen anything like it. The property is well-maintained, peaceful, and the restaurant serves delicious food. Will definitely visit again.",
-      location: "Ahmedabad, India",
-      platform: "TripAdvisor",
-      platformLink:
-        "https://www.tripadvisor.com/Hotel_Review-g297647-d34128119-Reviews-Bundela_Woods_Cottage_And_Restaurant-Khajuraho_Chhatarpur_District_Madhya_Pradesh.html",
-    },
-    {
-      id: 4,
-      name: "David Miller",
-      rating: 4,
-      date: "October 2025",
-      review:
-        "Beautiful property with excellent wooden architecture. The rooms are comfortable and clean. Staff is very courteous. Only minor issue was the Wi-Fi speed, but otherwise a great stay. Perfect for families.",
-      location: "New York, USA",
-      platform: "Google",
-      platformLink:
-        "https://www.google.com/maps/place/Bundela+Woods+Cottage+And+Restaurant",
-    },
-    {
-      id: 5,
-      name: "Anjali Verma",
-      rating: 5,
-      date: "September 2025",
-      review:
-        "Loved everything about Bundela Woods! The ambiance is so serene and calming. The wooden interiors are premium quality and give a luxurious yet natural feel. Great for couples looking for a romantic getaway.",
-      location: "Delhi, India",
-      platform: "Booking.com",
-      platformLink:
-        "https://www.booking.com/hotel/in/bundela-woods-cottage-and-restaurant.en-gb.html",
-    },
-    {
-      id: 6,
-      name: "Thomas Anderson",
-      rating: 5,
-      date: "August 2025",
-      review:
-        "Exceptional hospitality and beautiful property. The deluxe room was spacious with a lovely balcony. Close to all major Khajuraho attractions. The garden area is perfect for morning walks. Highly satisfied!",
-      location: "Sydney, Australia",
-      platform: "Expedia",
-      platformLink: "https://www.expedia.com/",
-    },
+    // {
+    //   id: 2,
+    //   name: "Emily Watson",
+    //   rating: 5,
+    //   date: "December 2025",
+    //   review:
+    //     "One of the most unique stays we have experienced in India. The 100% wooden construction gives such a warm, natural feeling. Staff was incredibly helpful and the location is perfect for exploring Khajuraho. Highly recommended!",
+    //   location: "London, UK",
+    //   platform: "Booking.com",
+    //   platformLink:
+    //     "https://www.booking.com/hotel/in/bundela-woods-cottage-and-restaurant.en-gb.html",
+    // },
+    // {
+    //   id: 3,
+    //   name: "Priya Patel",
+    //   rating: 5,
+    //   date: "November 2025",
+    //   review:
+    //     "The standard room with the tree view inside was such a unique experience! Never seen anything like it. The property is well-maintained, peaceful, and the restaurant serves delicious food. Will definitely visit again.",
+    //   location: "Ahmedabad, India",
+    //   platform: "TripAdvisor",
+    //   platformLink:
+    //     "https://www.tripadvisor.com/Hotel_Review-g297647-d34128119-Reviews-Bundela_Woods_Cottage_And_Restaurant-Khajuraho_Chhatarpur_District_Madhya_Pradesh.html",
+    // },
+    // {
+    //   id: 4,
+    //   name: "David Miller",
+    //   rating: 4,
+    //   date: "October 2025",
+    //   review:
+    //     "Beautiful property with excellent wooden architecture. The rooms are comfortable and clean. Staff is very courteous. Only minor issue was the Wi-Fi speed, but otherwise a great stay. Perfect for families.",
+    //   location: "New York, USA",
+    //   platform: "Google",
+    //   platformLink:
+    //     "https://www.google.com/maps/place/Bundela+Woods+Cottage+And+Restaurant",
+    // },
+    // {
+    //   id: 5,
+    //   name: "Anjali Verma",
+    //   rating: 5,
+    //   date: "September 2025",
+    //   review:
+    //     "Loved everything about Bundela Woods! The ambiance is so serene and calming. The wooden interiors are premium quality and give a luxurious yet natural feel. Great for couples looking for a romantic getaway.",
+    //   location: "Delhi, India",
+    //   platform: "Booking.com",
+    //   platformLink:
+    //     "https://www.booking.com/hotel/in/bundela-woods-cottage-and-restaurant.en-gb.html",
+    // },
+    // {
+    //   id: 6,
+    //   name: "Thomas Anderson",
+    //   rating: 5,
+    //   date: "August 2025",
+    //   review:
+    //     "Exceptional hospitality and beautiful property. The deluxe room was spacious with a lovely balcony. Close to all major Khajuraho attractions. The garden area is perfect for morning walks. Highly satisfied!",
+    //   location: "Sydney, Australia",
+    //   platform: "Expedia",
+    //   platformLink: "https://www.expedia.com/",
+    // },
   ];
 
   const platforms = [
     {
       name: "Google",
-      rating: "4.5",
-      reviews: "120+",
+      rating: "5",
+      reviews: "8+",
       logo: (
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
@@ -94,24 +94,24 @@ function Reviews() {
       color: "#4285F4",
       badge: "Most Popular",
     },
-    {
-      name: "Booking.com",
-      rating: "8.7",
-      reviews: "80+",
-      logo: <span className="plat-logo-text booking-logo">booking</span>,
-      link: "https://www.booking.com/hotel/in/bundela-woods-cottage-and-restaurant.en-gb.html#tab-reviews",
-      color: "#003580",
-      badge: null,
-    },
-    {
-      name: "TripAdvisor",
-      rating: "4.5",
-      reviews: "60+",
-      logo: <span className="plat-logo-emoji">🦉</span>,
-      link: "https://www.tripadvisor.com/Hotel_Review-g297647-d34128119-Reviews-Bundela_Woods_Cottage_And_Restaurant-Khajuraho_Chhatarpur_District_Madhya_Pradesh.html",
-      color: "#00AA6C",
-      badge: null,
-    },
+    // {
+    //   name: "Booking.com",
+    //   rating: "8.7",
+    //   reviews: "80+",
+    //   logo: <span className="plat-logo-text booking-logo">booking</span>,
+    //   link: "https://www.booking.com/hotel/in/bundela-woods-cottage-and-restaurant.en-gb.html#tab-reviews",
+    //   color: "#003580",
+    //   badge: null,
+    // },
+    // {
+    //   name: "TripAdvisor",
+    //   rating: "4.5",
+    //   reviews: "60+",
+    //   logo: <span className="plat-logo-emoji">🦉</span>,
+    //   link: "https://www.tripadvisor.com/Hotel_Review-g297647-d34128119-Reviews-Bundela_Woods_Cottage_And_Restaurant-Khajuraho_Chhatarpur_District_Madhya_Pradesh.html",
+    //   color: "#00AA6C",
+    //   badge: null,
+    // },
   ];
 
   const platformMeta = {

@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80");
+  background-image: url("https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774951454/IMG_5135_ai0lka.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -317,6 +317,15 @@
   height: 100%;
 }
 
+.video-wrapper video.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or cover if you want crop */
+  border-radius: 8px;
+}
 /* Lightbox */
 .lightbox {
   position: fixed;

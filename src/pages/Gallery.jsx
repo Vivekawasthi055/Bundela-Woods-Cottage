@@ -21,6 +21,7 @@ function Gallery() {
     "Outdoor",
     // "Garden",
     "Parking",
+    "Videos",
   ];
 
   const allItems = [...galleryItems, ...videoItems];
@@ -244,13 +245,19 @@ function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="video-wrapper">
-              <iframe
-                src={`https://www.youtube.com/embed/${currentVideo.url}?autoplay=1`}
-                title={currentVideo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              {currentVideo.source === "youtube" ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${currentVideo.url}?autoplay=1`}
+                  title={currentVideo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <video controls autoPlay playsInline className="video-player">
+                  <source src={currentVideo.url} type="video/mp4" />
+                </video>
+              )}
             </div>
             <div className="lightbox-caption">{currentVideo.title}</div>
           </div>

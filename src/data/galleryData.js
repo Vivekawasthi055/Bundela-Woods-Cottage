@@ -222,7 +222,7 @@ export const galleryItems = [
     url: "https://res.cloudinary.com/dxulakqzd/image/upload/f_auto,q_auto,w_1600/v1774951454/IMG_5135_ai0lka.jpg",
     category: "restaurant",
     type: "image",
-    title: "Outdoor Sitting Restaurant Area",
+    title: "Outdoor Sitting Area",
   },
   {
     id: 33,
@@ -477,23 +477,51 @@ export const galleryItems = [
 //
 // VIDEO ITEMS DATA //
 //
-
 export const videoItems = [
+  {
+    id: "v1",
+    url: "/videos/outdoor-view.mp4", // public folder
+    type: "video",
+    source: "file",
+    category: "videos",
+    title: "Outdoor Night View",
+    thumbnail: "/videos/thumb-img/outdoor-view.jpg",
+  },
+  {
+    id: "v2",
+    url: "/videos/garden-view.mp4", // public folder
+    type: "video",
+    source: "file",
+    category: "videos",
+    title: "Garden / Greenary View",
+    thumbnail: "/videos/thumb-img/garden-view.jpg",
+  },
+  {
+    id: "v3",
+    url: "/videos/rooms-view.mp4", // public folder
+    type: "video",
+    source: "file",
+    category: "videos",
+    title: "Rooms / Balcony View",
+    thumbnail: "/videos/thumb-img/rooms-view.jpg",
+  },
   // {
   //   id: "v1",
   //   url: "1fDn7a4TvwI",
-  //   category: "outdoor",
   //   type: "video",
+  //   source: "youtube", // ✅
+  //   category: "videos",
   //   title: "Property Tour",
   //   thumbnail:
   //     "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80",
   // },
   // {
   //   id: "v2",
-  //   url: "qemqQHaeCYo",
-  //   category: "rooms",
+  //   url: "https://video-previews.elements.envatousercontent.com/275e877a-662a-42dc-83f3-e8e795d5c6b7/watermarked_preview/watermarked_preview.mp4",
   //   type: "video",
-  //   title: "Room Showcase",
+  //   source: "file",
+  //   category: "videos",
+  //   title: "Room Video",
   //   thumbnail:
   //     "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&q=80",
   // },
