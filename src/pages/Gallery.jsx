@@ -109,6 +109,7 @@ function Gallery() {
           name="keywords"
           content="Khajuraho hotel gallery, hotel images Khajuraho, Bundela Woods photos, hotel rooms images Khajuraho"
         />
+        <link rel="canonical" href="https://www.bundelawoods.com/gallery" />
       </Helmet>
       <section className="gallery-hero">
         <div className="gallery-hero-overlay"></div>

@@ -74,6 +74,7 @@ function Contact() {
           name="keywords"
           content="contact hotel in Khajuraho, Bundela Woods contact, hotel phone Khajuraho, hotel near Khajuraho temples contact"
         />
+        <link rel="canonical" href="https://www.bundelawoods.com/contact" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

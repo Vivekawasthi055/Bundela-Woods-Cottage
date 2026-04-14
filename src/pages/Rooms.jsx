@@ -72,6 +72,7 @@ function Rooms() {
           name="keywords"
           content="rooms in Khajuraho, luxury rooms Khajuraho, hotel rooms near Khajuraho temples, deluxe room Khajuraho, cottage rooms Khajuraho"
         />
+        <link rel="canonical" href="https://www.bundelawoods.com/rooms" />
       </Helmet>
       {/* Hero Section */}
       <section className="rooms-hero">

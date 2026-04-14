@@ -40,6 +40,7 @@ function Home() {
           name="keywords"
           content="best hotel in Khajuraho, luxury hotel Khajuraho, boutique hotel Khajuraho, cottages near Khajuraho temples, Khajuraho resort"
         />
+        <link rel="canonical" href="https://www.bundelawoods.com/" />
       </Helmet>
       {/* Hero Section */}
       <section className="hero-section">

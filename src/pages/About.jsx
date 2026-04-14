@@ -18,6 +18,7 @@ function About() {
           name="keywords"
           content="about Bundela Woods, best hotel in Khajuraho, boutique hotel Khajuraho, luxury cottage Khajuraho, hotel near Khajuraho temples"
         />
+        <link rel="canonical" href="https://www.bundelawoods.com/about" />
       </Helmet>
       {/* Hero Section */}
       <section className="about-hero">

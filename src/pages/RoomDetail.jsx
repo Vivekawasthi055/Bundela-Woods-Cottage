@@ -155,6 +155,10 @@ function RoomDetail() {
           name="keywords"
           content={`hotel rooms in Khajuraho, ${room.name} Khajuraho, luxury hotel Khajuraho, best rooms in Khajuraho`}
         />
+        <link
+          rel="canonical"
+          href={`https://www.bundelawoods.com/rooms/${roomType}`}
+        />
       </Helmet>
       {/* Room Header */}
       <section className="room-detail-header">

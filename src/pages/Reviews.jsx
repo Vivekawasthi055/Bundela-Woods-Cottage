@@ -156,6 +156,7 @@ function Reviews() {
           name="keywords"
           content="Khajuraho hotel reviews, Bundela Woods reviews, best hotel in Khajuraho reviews, guest reviews Khajuraho"
         />
+        <link rel="canonical" href="https://www.bundelawoods.com/reviews" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
